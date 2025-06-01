@@ -72,10 +72,9 @@ export default function ServicesPage() {
                 {service.title}
               </h2>
               <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-900 bg-opacity-90 opacity-0 group-hover:opacity-100 transition-opacity p-4 rounded-lg">
-                <p className="text-sm mb-4 font-geo-regular">{service.description}</p>
+                <p className="text-xl mb-4 font-geo-regular">{service.description}</p>
                 <button
                   onClick={() => handleCTA(service.title)}
-                  className="px-4 py-2 bg-yellow-500 text-gray-900 font-bold rounded hover:bg-yellow-600 transition-all"
                 >
                   {service.cta}
                 </button>
