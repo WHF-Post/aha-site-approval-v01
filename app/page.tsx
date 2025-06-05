@@ -74,7 +74,7 @@ export default function Home() {
         </section>
 
         {/* About / Team / Contact Grid */}
-        <section className="max-w-7xl mx-auto px-4 py-6">
+        <section className="max-w-4xl mx-auto px-4 py-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <FeatureTile title="ABOUT US" image="/aha_logo.png" link="/about" />
             <FeatureTile title="TEAM" image="/aha_logo.png" link="/team" />
@@ -91,7 +91,7 @@ export default function Home() {
                 alt="Store Banner"
                 className="w-full h-full object-cover transform group-hover:scale-105 transition duration-300"
               />
-              <h2 className="absolute inset-0 flex items-center justify-center text-white text-4xl font-bold geo-regular group-hover:text-yellow-300 transition-colors duration-300">
+              <h2 className="absolute inset-0 flex items-center justify-center text-white text-7xl font-bold geo-regular group-hover:text-yellow-300 transition-colors duration-300">
                 SUPPORT AHA
               </h2>
             </div>
