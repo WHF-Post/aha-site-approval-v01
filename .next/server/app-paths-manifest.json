@@ -1,5 +1,4 @@
 {
-  "/not-found": "app/not-found.js",
   "/page": "app/page.js",
   "/exclusive-experiences/page": "app/exclusive-experiences/page.js",
   "/enrichment-options/page": "app/enrichment-options/page.js",
