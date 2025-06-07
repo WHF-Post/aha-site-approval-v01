@@ -31,8 +31,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <a href="/team" className="hover:text-yellow-300">Team</a>
               <a href="/contact" className="hover:text-yellow-300">Contact</a>
               <a href="/elite-training" className="hover:text-yellow-300">Elite Training</a>
-              <Link href="/enrichment-options">Enrichment</Link>
-              <Link href="/exclusive-experiences">Experiences</Link>
+              <Link href="/enrichment-options" className="hover:text-yellow-400">Enrichment</Link>
+              <Link href="/exclusive-experiences" className="hover:text-yellow-400">Experiences</Link>
             </div>
           </nav>
         )}
