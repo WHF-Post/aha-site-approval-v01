@@ -6,17 +6,24 @@ import Link from 'next/link';
 export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-neutral-800 to-black text-white font-[Geo]">
+      {/* Main Content */}
       <main className="flex-grow max-w-5xl mx-auto px-6 py-12 text-center">
+        {/* Header */}
         <h1 className="text-4xl md:text-5xl font-bold mb-6">About Artistic Heights Academy</h1>
+        {/* Paragraph */}
         <p className="text-lg md:text-xl mb-10 leading-relaxed max-w-3xl mx-auto">
-        Located in the heart of West Midtown Atlanta, AHA equips students with a solid, versatile foundation by exposing them to multiple approaches, allowing them to discover and develop their own authentic acting voice.  AHA vocational programs are designed to provide broad-based training experience grounded in a range of proven and widely respected acting methods, including Stanislavsky, Meisner, Chekhov, and more.
-
-At Artistic Heights Academy, we take a holistic approach to artistic development, offering elite training, immersive enrichment options, and exclusive entertainment experiences year-round.  We provide an inspiring environment where performers can refine their craft, build confidence, and reach new artistic heights.  Our distinguished team of industry professionals and experienced educators are dedicated to providing high-quality instruction in a supportive and empowering setting - ensuring every artist has the tools to thrive.
-
-Research underscores the transformative power of arts engagement, listing benefits such as: Enhanced Cognitive Ability, Sharpened Problem-Solving Skills, Increased Self-Esteem, and Deeper Emotional Expression.  These advantages not only shape personal growth but also foster professional success across industries.
-
+          Located in the heart of West Midtown Atlanta in the{' '}
+          <a
+            href="https://www.thegoatfarm.info/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-yellow-400 hover:text-yellow-500 transition"
+          >
+            GOAT FARM ARTS CENTER
+          </a>
+          , AHA equips students with a solid, versatile foundation by exposing them to multiple approaches, allowing them to discover and develop their own authentic acting voice. AHA vocational programs are designed to provide broad-based training experience grounded in a range of proven and widely respected acting methods, including Stanislavsky, Meisner, Chekhov, and more.
         </p>
-
+        {/* Link to Team Page */}
         <Link
           href="/team"
           className="inline-block mt-4 px-6 py-3 text-lg font-semibold text-black bg-yellow-400 rounded hover:bg-yellow-500 transition"

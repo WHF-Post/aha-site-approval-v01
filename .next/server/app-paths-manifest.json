@@ -1,7 +1,7 @@
 {
-  "/page": "app/page.js",
-  "/exclusive-experiences/page": "app/exclusive-experiences/page.js",
-  "/enrichment-options/page": "app/enrichment-options/page.js",
   "/exclusive-experiences/bcp-page/page": "app/exclusive-experiences/bcp-page/page.js",
+  "/team/page": "app/team/page.js",
+  "/about/page": "app/about/page.js",
+  "/elite-training/page": "app/elite-training/page.js",
   "/store/page": "app/store/page.js"
 }
