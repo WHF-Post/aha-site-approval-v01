@@ -24,7 +24,7 @@ export default function Home() {
       <section className="relative w-full h-screen bg-gradient-to-b from-[#1a1a1a] via-[#242424] to-[#1a1a1a]">
   <video
     className="absolute top-0 left-0 w-full h-full object-contain"
-    src="/hero-banner.mp4"
+    src="/hero-banner.mov"
     autoPlay
     loop
     muted

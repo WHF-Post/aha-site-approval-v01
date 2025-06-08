@@ -6,18 +6,14 @@ const teamMembers = [
   {
     name: 'Jonna Naegele',
     title: 'Founder',
-    bio: `Jonna Naegele is the visionary founder of Artistic Heights Academy, a premier institution dedicated to nurturing talent and fostering artistic creativity.
-    
-Jonna Naegele, a renowned American acting coach, producer, and advocate for actors, has spent 16 years empowering individuals to tap into their creative potential and embrace personal growth. With a wealth of experience in nurturing raw talent and guiding aspiring artists, Jonna has honed her ability to perceive and draw out the unique qualities that define each individual. Through her work as a certified life coach, she has developed a deep understanding of the human condition, emphasizing the importance of self-discovery and empathy in the pursuit of artistic excellence.
+    bio: `Jonna Naegele is the visionary founder of Artistic Heights Academy, and a renowned American acting coach, producer, and advocate for actors, has spent 16 years empowering individuals to tap into their creative potential and embrace personal growth. With a wealth of experience in nurturing raw talent and guiding aspiring artists, Jonna has honed her ability to perceive and draw out the unique qualities that define each individual. Through her work as a certified life coach, she has developed a deep understanding of the human condition, emphasizing the importance of self-discovery and empathy in the pursuit of artistic excellence.
 
 Driven by a passion for cultural exchange and diversity, Jonna aspires to expand her impact internationally, particularly in Africa and other regions where she already works with students and clients. Her dedication to helping others find their voices and tell their stories is intertwined with a commitment to understanding culturally specific values and beliefs through the study of philosophy. By bridging the gap between different backgrounds and perspectives, Jonna is poised to foster connections and empower individuals from diverse communities to express themselves authentically in the entertainment industry and beyond.`,
   },
   {
     name: 'Katrina Pitts',
     title: 'President & CEO',
-    bio: `Katrina Pitts is the President & CEO of Artistic Heights Academy, a premier institution dedicated to nurturing and fostering artistic creativity.
-
-Katrina demonstrated a natural aptitude for STEM subjects from an early age, attending the Head Start program at Hampton University before entering elementary school. Her commitment to academic excellence continued throughout her education as she attended magnet schools, participated in extracurricular leadership roles, and tested into Advanced Placement (AP) classes starting in middle school.
+    bio: `Katrina Pitts is the President & CEO of Artistic Heights Academy, and has demonstrated a natural aptitude for STEM subjects from an early age, attending the Head Start program at Hampton University before entering elementary school. Her commitment to academic excellence continued throughout her education as she attended magnet schools, participated in extracurricular leadership roles, and tested into Advanced Placement (AP) classes starting in middle school.
 
 Katrina holds a Bachelor of Science degree in Mechanical Engineering (BSME) and a Master's in Business Administration (MBA) with a focus on Project Management. Additionally, she has earned a Project Management Certificate, which further solidifies her expertise in managing complex projects within the IT sector. Throughout her career, Katrina has remained dedicated to staying current with the latest technology trends. She holds six IT certifications in Human Resources Information Systems. This knowledge allows her to provide top-notch consulting services to her clients. In addition to her professional pursuits, Katrina is passionate about giving back to her community. She actively engages with adolescents and adults by teaching and tutoring them in STEM subjects, fostering the next generation's interest in technology.
 
@@ -27,10 +23,8 @@ Through her extensive experience, educational background, and commitment to comm
   },
   {
     name: 'Lavelle Muhammad',
-    title: 'Executive Director',
-    bio: `Lavelle Muhammad is the Executive Director & COO of Artistic Heights Academy, a premier institution dedicated to nurturing talent and fostering artistic creativity.
-
-Lavelle Muhammad is the Principal and Executive Director of the Nativity School of Harrisburg, a middle school dedicated to serving disadvantaged inner-city boys. He has been a pivotal figure in education since joining the school in 2012, bringing over 30 years of diverse experience in various educational roles, including as a teacher, school administrator, and juvenile corrections administrator. His extensive background equips him with the skills necessary to lead effectively in challenging educational environments.
+    title: 'Executive Director & COO',
+    bio: `Lavelle Muhammad is the Executive Director & COO of Artistic Heights Academy, and the Principal and Executive Director of the Nativity School of Harrisburg, a middle school dedicated to serving disadvantaged inner-city boys. He has been a pivotal figure in education since joining the school in 2012, bringing over 30 years of diverse experience in various educational roles, including as a teacher, school administrator, and juvenile corrections administrator. His extensive background equips him with the skills necessary to lead effectively in challenging educational environments.
 
 Lavelle Muhammad’s journey into education was influenced by his own childhood experiences. Growing up in a home affected by addiction and dysfunction, he faced significant challenges that shaped his understanding of the struggles many of his students encounter. This personal history instilled in him a desire to help at-risk youth navigate their circumstances. He initially aspired to become a professional athlete but found inspiration through his stepfather, who worked at a juvenile detention center.
 
