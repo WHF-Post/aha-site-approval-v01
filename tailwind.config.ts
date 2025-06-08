@@ -6,7 +6,11 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Open Sans", "sans-serif"], // Add Open Sans to the font family
+      },
+    },
   },
   plugins: [],
 };

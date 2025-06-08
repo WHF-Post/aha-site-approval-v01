@@ -58,8 +58,7 @@ export default function TeamPage() {
             <div key={index} className="bg-neutral-800 p-6 rounded-lg shadow-md text-center">
               <h2 className="text-3xl font-semibold">{member.name}</h2>
               <h3 className="text-xl text-yellow-400">{member.title}</h3>
-              <p className="mt-4 text-base leading-relaxed">{member.bio}</p>
-            </div>
+              <p className="mt-4 text-base leading-relaxed font-open-sans">{member.bio}</p>            </div>
           ))}
         </div>
       </main>
