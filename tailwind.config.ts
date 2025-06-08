@@ -8,7 +8,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Open Sans", "sans-serif"], // Add Open Sans to the font family
+        'open-sans': ['"Open Sans"', 'sans-serif'],
+        sans: ['"Open Sans"', 'sans-serif'], // optional: override default
       },
     },
   },
