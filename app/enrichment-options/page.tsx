@@ -64,7 +64,10 @@ export default function EnrichmentOptionsPage() {
               {trainingOptions[active].title}
             </h2>
             <p className="mb-6 text-lg">{trainingOptions[active].description}</p>
-            <button className="bg-yellow-400 text-black px-6 py-2 rounded hover:bg-yellow-500 font-semibold transition">
+            <button
+  className="bg-yellow-400 text-black px-6 py-2 rounded hover:bg-yellow-500 font-semibold transition"
+  onClick={() => alert('Form link coming soon')}
+>
               {trainingOptions[active].cta}
             </button>
             <p className="text-sm mt-2 text-gray-400">Login required to continue</p>

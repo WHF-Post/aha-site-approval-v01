@@ -24,7 +24,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   className="h-10 w-auto object-contain"
                 />
               </Link>
-              <span className="text3xl font-bold">Artistic Heights Academy</span>
+              <Link href="/login">
+  <span className="text-xl font-bold cursor-pointer hover:text-yellow-400">
+    Artistic Heights Academy
+  </span>
+</Link>
             </div>
             <div className="flex space-x-6 text-sm">
               <a href="/about" className="hover:text-yellow-300">About</a>
