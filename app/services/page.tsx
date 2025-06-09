@@ -1,94 +1,42 @@
-'use client';
-
+// app/store/page.tsx
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
 
-const services = [
-  {
-    title: 'Classes/Workshops',
-    image: '/services/classes.png',
-    description:
-      'Expand horizons and master your craft with top-notch classes and workshops designed to help push beyond your limits and unlock your true potential.',
-    cta: 'Sign up today!',
-  },
-  {
-    title: '1:1 Private Coaching',
-    image: '/services/coaching.png',
-    description:
-      'Reach your artistic height with personalized coaching sessions and entertainment industry prep designed to help land the role.',
-    cta: 'Book today!',
-  },
-  {
-    title: 'Self Tapes/Demo Reels',
-    image: '/services/selftape.png',
-    description:
-      'Capture your best look with professional audition self tapes that showcase your unique personality and make a lasting impression.',
-    cta: 'Book today!',
-  },
-  {
-    title: 'Studio Rentals',
-    image: '/services/studio.png',
-    description:
-      'Flexible, fully equipped creative spaces perfect for meetings, auditions, casting calls, rehearsals, photo shoots, and production.',
-    cta: 'Book today!',
-  },
-];
-
-export default function ServicesPage() {
-  const [activeService, setActiveService] = useState<string | null>(null);
-  const router = useRouter();
-
-  const handleCTA = (serviceTitle: string) => {
-    // TODO: check user login
-    const isLoggedIn = false; // Placeholder for login check logic
-    if (!isLoggedIn) {
-      router.push('/login');
-    } else {
-      setActiveService(serviceTitle);
-    }
-  };
+export default function StorePage() {
+  const [showPopup, setShowPopup] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#1a1a1a] to-[#000] text-white font-geo-regular">
-      <div className="container mx-auto py-16 px-4">
-        <h1 className="text-4xl font-bold text-center mb-12">AHA Services</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service) => (
-            <div
-              key={service.title}
-              className="group relative flex flex-col items-center text-center"
-            >
-              <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-gray-700 group-hover:border-yellow-500 transition-all">
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  width={160}
-                  height={160}
-                  className="object-cover"
-                />
-              </div>
-              <h2 className="mt-4 text-xl font-semibold group-hover:text-yellow-500 transition-all">
-                {service.title}
-              </h2>
-              <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-900 bg-opacity-90 opacity-0 group-hover:opacity-100 transition-opacity p-4 rounded-lg">
-                <p className="text-xl mb-4 font-geo-regular">{service.description}</p>
-                <button
-                  onClick={() => handleCTA(service.title)}
-                >
-                  {service.cta}
-                </button>
-              </div>
-              {activeService === service.title && (
-                <div className="mt-4 p-4 bg-gray-700 rounded-lg text-sm">
-                  <p>Placeholder booking/sign-up form for {service.title}</p>
-                </div>
-              )}
-            </div>
-          ))}
+    <div className="min-h-screen flex flex-col justify-between">
+      <main className="flex flex-col items-center justify-start p-12 space-y-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <a href="https://coachedbyjonnainc.com/studentmerch" target="_blank" rel="noopener noreferrer" className="text-center">
+            <Image src="/store/aha-hoodie.png" alt="AHA Hoodie" width={500} height={500} />
+          </a>
+          <a href="https://coachedbyjonnainc.com/studentmerch" target="_blank" rel="noopener noreferrer" className="text-center">
+            <Image src="/store/aha-shirt.png" alt="AHA T-Shirt" width={500} height={500} />
+          </a>
+          <a href="https://coachedbyjonnainc.com/studentmerch" target="_blank" rel="noopener noreferrer" className="text-center">
+            <Image src="/store/sketchpad.png" alt="AHA Sketchpad" width={500} height={500} />
+          </a>
         </div>
-      </div>
-      {/* Sticky Footer */}
+
+        <a href="https://coachedbyjonnainc.com/studentmerch" target="_blank" rel="noopener noreferrer">
+          <button className="text-xl bg-red-700 hover:bg-red-800 text-white py-4 px-8 rounded-xl shadow-lg transition">AHA Swag Shop</button>
+        </a>
+
+        <div onMouseEnter={() => setShowPopup(true)} onMouseLeave={() => setShowPopup(false)}>
+          <button className="text-xl bg-yellow-700 hover:bg-yellow-800 text-white py-4 px-8 rounded-xl shadow-lg transition">
+            Donate to AHA
+          </button>
+          {showPopup && (
+            <div className="mt-2 p-4 bg-gray-800 text-white text-sm rounded shadow-md text-center max-w-sm mx-auto">
+              Every Donation to AHA over $250 will receive an original piece of digital art from an AHA student.
+            </div>
+          )}
+        </div>
+      </main>
+
       <footer className="bg-neutral-800 text-white text-center text-sm py-6">
         <div className="max-w-7xl mx-auto flex flex-col items-center justify-center space-y-4">
           <img src="/aha_logo_txt.png" alt="AHA Logo" className="h-[60px] w-auto object-contain" />

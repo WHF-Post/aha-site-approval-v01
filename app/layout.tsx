@@ -25,12 +25,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 />
               </Link>
               <Link href="/login">
-  <span className="text-xl font-bold cursor-pointer hover:text-yellow-400">
-    Artistic Heights Academy
-  </span>
-</Link>
+                <span className="text-xl font-bold cursor-pointer hover:text-yellow-400">
+                  Artistic Heights Academy
+                </span>
+              </Link>
             </div>
             <div className="flex space-x-6 text-sm">
+              <Link href="/store" className="hover:text-yellow-400">Shop</Link>
               <a href="/about" className="hover:text-yellow-300">About</a>
               <a href="/team" className="hover:text-yellow-300">Team</a>
               <a href="/contact" className="hover:text-yellow-300">Contact</a>

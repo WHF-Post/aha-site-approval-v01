@@ -1,8 +1,3 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-    experimental: {
-      appDir: true, // ✅ REQUIRED for App Router
-    },
-  };
-  
+const nextConfig = {};  
   module.exports = nextConfig;
