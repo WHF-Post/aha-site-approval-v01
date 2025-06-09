@@ -1,11 +1,11 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '@/lib/firebase';
 
-export default function RegisterPage() {
+function RegisterForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const redirect = searchParams.get('redirect') || '/store';
@@ -28,31 +28,39 @@ export default function RegisterPage() {
   return (
     <main className="flex flex-col items-center justify-center min-h-screen p-6 bg-black text-white">
       <h1 className="text-3xl font-bold mb-6">Register</h1>
-      <form onSubmit={handleRegister} className="w-full max-w-sm space-y-4">
+      <form onSubmit={handleRegister} className="space-y-4 w-full max-w-sm">
         <input
           type="email"
           placeholder="Email"
-          className="w-full p-3 rounded text-black"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          className="w-full p-3 bg-neutral-800 border border-neutral-600 rounded"
           required
         />
         <input
           type="password"
           placeholder="Password"
-          className="w-full p-3 rounded text-black"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          className="w-full p-3 bg-neutral-800 border border-neutral-600 rounded"
           required
         />
+        {error && <p className="text-red-500">{error}</p>}
         <button
           type="submit"
-          className="w-full bg-yellow-400 text-black py-3 rounded hover:bg-yellow-500 font-semibold transition"
+          className="w-full bg-yellow-600 hover:bg-yellow-700 text-white py-3 rounded font-bold"
         >
-          Sign Up
+          Register
         </button>
-        {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
       </form>
     </main>
+  );
+}
+
+export default function RegisterPage() {
+  return (
+    <Suspense fallback={<div>Loading registration...</div>}>
+      <RegisterForm />
+    </Suspense>
   );
 }
