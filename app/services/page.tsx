@@ -4,8 +4,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
-export default function StorePage() {
-  const [showPopup, setShowPopup] = useState(false);
+export default function ServicesPage() {
+    const [showPopup, setShowPopup] = useState(false);
 
   return (
     <div className="min-h-screen flex flex-col justify-between">
