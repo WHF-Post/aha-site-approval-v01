@@ -89,7 +89,7 @@ export default function Home() {
                 alt="Store Banner"
                 className="w-full h-full object-cover transform group-hover:scale-105 transition duration-300"
               />
-              <h2 className="absolute inset-0 flex items-center justify-center text-white text-7xl font-bold geo-regular group-hover:text-yellow-300 transition-colors duration-300 font-russo">
+              <h2 className="absolute inset-0 flex items-center justify-center text-white text-4xl md:text-5xl lg:text-7xl font-bold geo-regular group-hover:text-yellow-300 transition-colors duration-300 font-russo">
                 SUPPORT AHA
               </h2>
             </div>
