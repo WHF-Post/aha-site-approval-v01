@@ -1,91 +1,103 @@
 'use client';
 
-import { useState, Suspense } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { auth, firestore } from '@/lib/firebase';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '@/lib/firebase';
+import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
 import Link from 'next/link';
 
-function RegisterForm() {
+export default function RegisterPage() {
   const router = useRouter();
-  const searchParams = useSearchParams();
-  const redirect = searchParams.get('redirect') || '/store';
-
-  const [name, setName] = useState('');
-  const [age, setAge] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [form, setForm] = useState({
+    name: '',
+    age: '',
+    email: '',
+    password: '',
+  });
   const [error, setError] = useState('');
 
-  const handleRegister = async (e: React.FormEvent) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
+
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
-      router.push(redirect);
-    } catch (err: any) {
-      setError(err.message || 'Registration failed');
+      const userCred = await createUserWithEmailAndPassword(auth, form.email, form.password);
+      const user = userCred.user;
+
+      await setDoc(doc(firestore, 'users', user.uid), {
+        name: form.name,
+        age: form.age,
+        email: form.email,
+        createdAt: serverTimestamp(),
+      });
+
+      router.push('/login');
+    } catch (err) {
+      console.error(err);
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError('An unknown error occurred.');
+      }
     }
   };
 
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen p-6 bg-black text-white font-geo">
-      <h1 className="text-3xl font-bold mb-6">Register</h1>
-      <form onSubmit={handleRegister} className="space-y-4 w-full max-w-sm">
+    <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-4">
+      <h1 className="text-4xl font-bold mb-6 text-yellow-300">Register</h1>
+      <form onSubmit={handleSubmit} className="w-full max-w-sm space-y-4">
         <input
+          className="w-full px-4 py-2 rounded bg-neutral-800 text-white"
           type="text"
+          name="name"
           placeholder="Full Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          className="w-full p-3 bg-neutral-800 border border-neutral-600 rounded text-white"
+          value={form.name}
+          onChange={handleChange}
           required
         />
         <input
+          className="w-full px-4 py-2 rounded bg-neutral-800 text-white"
           type="number"
+          name="age"
           placeholder="Age"
-          value={age}
-          onChange={(e) => setAge(e.target.value)}
-          className="w-full p-3 bg-neutral-800 border border-neutral-600 rounded text-white"
+          value={form.age}
+          onChange={handleChange}
           required
         />
         <input
+          className="w-full px-4 py-2 rounded bg-neutral-800 text-white"
           type="email"
+          name="email"
           placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="w-full p-3 bg-neutral-800 border border-neutral-600 rounded text-white"
+          value={form.email}
+          onChange={handleChange}
           required
         />
         <input
+          className="w-full px-4 py-2 rounded bg-neutral-800 text-white"
           type="password"
+          name="password"
           placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          className="w-full p-3 bg-neutral-800 border border-neutral-600 rounded text-white"
+          value={form.password}
+          onChange={handleChange}
           required
         />
         {error && <p className="text-red-500 text-sm">{error}</p>}
-        <button
-          type="submit"
-          className="w-full bg-yellow-600 hover:bg-yellow-700 text-white py-3 rounded font-bold"
-        >
-          Register
+        <button type="submit" className="w-full bg-yellow-500 hover:bg-yellow-600 text-black py-2 px-4 rounded">
+          Create Account
         </button>
-        <p className="text-sm text-center text-neutral-400 mt-4">
-          Already have an account?{' '}
-          <Link href="/login" className="text-yellow-500 hover:underline font-bold">
-            Login
-          </Link>
-        </p>
       </form>
-    </main>
-  );
-}
-
-export default function RegisterPage() {
-  return (
-    <Suspense fallback={<div>Loading registration...</div>}>
-      <RegisterForm />
-    </Suspense>
+      <p className="mt-4 text-sm">
+        Already have an account?{' '}
+        <Link href="/login" className="text-yellow-300 hover:underline">
+          Login
+        </Link>
+      </p>
+    </div>
   );
 }

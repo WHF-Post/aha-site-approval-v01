@@ -40,7 +40,7 @@ export default function Home() {
             {["INDIVIDUALITY", "INTEGRITY", "CREATIVITY", "DIVERSITY"].map((word, i) => (
               <span
                 key={`${j}-${i}`}
-                className="text-white text-4xl font-bold flex items-center space-x-3 hover:text-yellow-300 transition-colors duration-300 font-russo"
+                className="text-white text-xl font-bold flex items-center space-x-3 hover:text-yellow-300 transition-colors duration-300 font-russo"
               >
                 <span>{word}</span>
                 <div className="h-24 w-24 flex items-center justify-center">

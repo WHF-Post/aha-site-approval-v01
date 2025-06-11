@@ -10,8 +10,11 @@ const config: Config = {
       fontFamily: {
         russo: ['"Russo One"', 'sans-serif'],
         changa: ['"Changa One"', 'sans-serif'],
+        // fallback
+        sans: ['"Changa One"', 'sans-serif'],
       },
-    }  },
+    },
+  },
   plugins: [],
 };
 

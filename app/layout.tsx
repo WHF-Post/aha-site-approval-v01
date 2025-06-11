@@ -15,8 +15,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className="bg-black text-white font-[Geo] min-h-screen flex flex-col">
         {showNav && (
-          <nav className="bg-neutral-800 text-white py-4 px-6 flex items-center justify-between">
-            <div className="flex items-center space-x-4">
+          <nav className="bg-neutral-800 text-white py-4 px-4 sm:px-6 flex flex-col sm:flex-row sm:items-center sm:justify-between space-y-4 sm:space-y-0">
+            <div className="flex items-center justify-between">
               <Link href="/">
                 <img
                   src="/aha_logo.png"
@@ -30,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </span>
               </Link>
             </div>
-            <div className="flex space-x-6 text-sm">
+            <div className="flex flex-wrap justify-center gap-4 text-sm text-center">
               <Link href="/store" className="hover:text-yellow-400">Shop</Link>
               <a href="/about" className="hover:text-yellow-300">About</a>
               <a href="/team" className="hover:text-yellow-300">Team</a>
