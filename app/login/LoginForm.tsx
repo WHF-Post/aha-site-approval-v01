@@ -1,9 +1,10 @@
 'use client';
 
-import { useRouter, useSearchParams } from 'next/navigation';
 import { useState } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '@/lib/firebase';
+import Link from 'next/link';
 
 export default function LoginForm() {
   const router = useRouter();
@@ -16,25 +17,27 @@ export default function LoginForm() {
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError('');
     try {
       await signInWithEmailAndPassword(auth, email, password);
       router.push(redirect);
     } catch (err: any) {
-      setError(err.message || 'Login failed');
+      setError(err.message);
     }
   };
 
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen p-6 bg-black text-white">
-      <h1 className="text-3xl font-bold mb-6">Login</h1>
-      <form onSubmit={handleLogin} className="space-y-4 w-full max-w-sm">
+    <main className="min-h-screen bg-black text-white flex flex-col items-center justify-center font-geo px-4">
+      <h1 className="text-2xl font-bold mb-6">Login</h1>
+      <form
+        onSubmit={handleLogin}
+        className="space-y-4 w-full max-w-sm"
+      >
         <input
           type="email"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full p-3 bg-neutral-800 border border-neutral-600 rounded"
+          className="w-full p-3 bg-neutral-800 border border-neutral-600 rounded text-white"
           required
         />
         <input
@@ -42,16 +45,23 @@ export default function LoginForm() {
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="w-full p-3 bg-neutral-800 border border-neutral-600 rounded"
+          className="w-full p-3 bg-neutral-800 border border-neutral-600 rounded text-white"
           required
         />
-        {error && <p className="text-red-500">{error}</p>}
+        {error && <p className="text-red-500 text-sm">{error}</p>}
         <button
           type="submit"
           className="w-full bg-yellow-600 hover:bg-yellow-700 text-white py-3 rounded font-bold"
         >
           Login
         </button>
+
+        <p className="text-sm text-center text-neutral-400 mt-4">
+          Don’t have an account?{' '}
+          <Link href="/register" className="text-yellow-500 hover:underline font-bold">
+            Register
+          </Link>
+        </p>
       </form>
     </main>
   );

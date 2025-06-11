@@ -5,3 +5,4 @@ node_modules/
 public/*.mp4
 public/header-video.mp4
 .next/
+.next/

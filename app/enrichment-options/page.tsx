@@ -1,82 +1,62 @@
 'use client';
 
-import { useState } from 'react';
+import Link from "next/link";
+import { useState } from "react";
 
-const trainingOptions = [
-  {
-    title: 'Business of Entertainment',
-    description:
-      'Learn how the industry really works—contracts, auditions, branding, agents, unions, and strategy—so you’re ready for the real world.',
-    cta: 'Start Learning',
-  },
-  {
-    title: 'Production & Post',
-    description:
-      'Gain valuable creative and technical skills behind the camera in directing, editing, lighting, and producing for the screen.',
-    cta: 'Enroll Now',
-  },
-];
-
-export default function EnrichmentOptionsPage() {
-  const [active, setActive] = useState<number | null>(null);
+export default function EnrichmentOptions() {
+  const [showInternPopup, setShowInternPopup] = useState(false);
 
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col justify-between font-sans">
-      <main className="flex flex-col items-center justify-center px-4 py-12">
-        <h1 className="text-4xl font-bold text-center mb-6 geo-regular">
-          Enrichment Options
-        </h1>
+    <div className="min-h-screen flex flex-col justify-between bg-black text-white">
+      <div className="py-12 px-6 flex flex-col items-center justify-start space-y-10">
+        <h1 className="text-yellow-400 font-russo text-4xl text-center">Enrichment Options</h1>
 
-        <p className="max-w-3xl text-lg text-center mb-12 text-gray-300">
-          At Artistic Heights Academy, we believe talent is just the beginning. Whether you’re stepping
-          in front of the camera or leading from behind it, our enrichment programs are designed to
-          sharpen your craft, deepen your industry insight, and prepare you for lasting success in entertainment
-          and creative industries.
-          <br /><br />
-          Our instruction is delivered by a dynamic team of working professionals—actors, producers, editors,
-          coaches, and creatives—who bring real-world experience and a commitment to developing confident,
-          capable artists and storytellers.
+        <p className="px-20 text-lg mb-6 text-center">
+          At Artistic Heights Academy, our acting classes are designed as a three-month immersive development program that lays the foundation of acting by integrating techniques from Meisner, Stanislavsky, and other famous acting teachers and legends. Through an engaging blend of instruction, exercises, discussions, and performances, students cultivate essential skills that enhance their craft and refine their artistic expression.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full max-w-6xl">
-          {trainingOptions.map((option, index) => (
-            <div
-              key={index}
-              className="bg-[#1f1f1f] p-6 rounded-lg text-center border border-gray-700 hover:border-yellow-400 transition cursor-pointer"
-              onClick={() => setActive(index)}
-            >
-              <h2 className="text-2xl font-semibold geo-regular">{option.title}</h2>
+        <div className="flex flex-col md:flex-row gap-6 items-center">
+          <button
+            onClick={() => setShowInternPopup(true)}
+            className="bg-neutral-800 text-white text-2xl px-8 py-6 rounded-xl font-russo hover:bg-yellow-400 transition"
+          >
+            Internships
+          </button>
+
+          <Link
+            href="https://coachedbyjonnainc.com/actingclassesandbooks?category=Class"
+            className="bg-neutral-800 text-white text-2xl px-8 py-6 rounded-xl font-russo hover:bg-yellow-400 transition"
+          >
+            Private Coaching
+          </Link>
+
+          <Link
+            href="https://coachedbyjonnainc.com/actingclassesandbooks"
+            className="bg-neutral-800 text-white text-2xl px-4 py-6 rounded-xl font-russo hover:bg-yellow-400 transition"
+          >
+            Educational Resources
+          </Link>
+        </div>
+
+        {showInternPopup && (
+          <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
+            <div className="bg-white text-black p-8 rounded-xl max-w-md text-center space-y-4">
+              <h2 className="text-xl font-bold">Internship Opportunities Coming Soon</h2>
+              <p>
+                We're actively developing partnerships with institutions like SCAD and other performing arts organizations to offer immersive internship experiences that support our students' real-world growth in the entertainment industry.
+              </p>
+              <button
+                onClick={() => setShowInternPopup(false)}
+                className="mt-4 bg-neutral-800 text-white px-4 py-2 rounded hover:bg-neutral-700"
+              >
+                Close
+              </button>
             </div>
-          ))}
-        </div>
-      </main>
-
-      {active !== null && (
-        <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
-          <div className="bg-[#111] border border-gray-600 p-8 rounded-lg max-w-md text-center relative">
-            <button
-              onClick={() => setActive(null)}
-              className="absolute top-2 right-3 text-white text-xl hover:text-yellow-400"
-            >
-              &times;
-            </button>
-            <h2 className="text-2xl font-semibold mb-4 geo-regular">
-              {trainingOptions[active].title}
-            </h2>
-            <p className="mb-6 text-lg">{trainingOptions[active].description}</p>
-            <button
-  className="bg-yellow-400 text-black px-6 py-2 rounded hover:bg-yellow-500 font-semibold transition"
-  onClick={() => alert('Form link coming soon')}
->
-              {trainingOptions[active].cta}
-            </button>
-            <p className="text-sm mt-2 text-gray-400">Login required to continue</p>
           </div>
-        </div>
-      )}
-
+        )}
+      </div>
       {/* Sticky Footer */}
-      <footer className="bg-neutral-800 text-white text-center text-sm py-6">
+      <footer className="bg-neutral-800 text-white text-center text-sm py-6 w-full">
         <div className="max-w-7xl mx-auto flex flex-col items-center justify-center space-y-4">
           <img src="/aha_logo_txt.png" alt="AHA Logo" className="h-[60px] w-auto object-contain" />
           <div className="flex space-x-6">

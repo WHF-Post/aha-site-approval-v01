@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-black text-white font-sans">
       <main className="flex-grow">
-      <section className="relative w-full h-screen bg-gradient-to-b from-[#1a1a1a] via-[#242424] to-[#1a1a1a]">
+      <section className="relative w-full h-screen bg-gradient-to-b from-[#1a1a1a] via-[#242424] to-[#1a1a1a] py-1">
   <video
     className="absolute top-0 left-0 w-full h-full object-contain"
     src="/hero-banner.mp4"
@@ -30,9 +30,8 @@ export default function Home() {
     muted
     playsInline
   />
-</section>
-{/* Scrolling Core Values Bar */}
-<section className="overflow-hidden bg-neutral-800 py-5 cursor-pointer">
+</section>{/* Scrolling Core Values Bar */}
+<section className="overflow-hidden bg-neutral-800 py-0 cursor-pointer font-russo">
   <Link href="/services" className="block w-full">
     <div className="relative w-full">
       <div className="flex animate-marquee space-x-10 items-center w-max">
@@ -41,7 +40,7 @@ export default function Home() {
             {["INDIVIDUALITY", "INTEGRITY", "CREATIVITY", "DIVERSITY"].map((word, i) => (
               <span
                 key={`${j}-${i}`}
-                className="text-white text-5xl font-bold geo-regular flex items-center space-x-3 hover:text-yellow-300 transition-colors duration-300"
+                className="text-white text-4xl font-bold flex items-center space-x-3 hover:text-yellow-300 transition-colors duration-300 font-russo"
               >
                 <span>{word}</span>
                 <div className="h-24 w-24 flex items-center justify-center">
@@ -58,8 +57,7 @@ export default function Home() {
       </div>
     </div>
   </Link>
-</section>
-        {/* Three Feature Tiles */}
+</section>{/* Three Feature Tiles */}
         <section className="max-w-7xl mx-auto px-4 py-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <FeatureTile title="Elite Training" image="/img1.png" link="/elite-training" />
@@ -69,7 +67,7 @@ export default function Home() {
         </section>
 
         {/* Tips & Testimonials Bar */}
-        <section className="bg-neutral-800 text-white text-center py-4 text-5xl font-bold geo-regular hover:text-yellow-300 transition-colors duration-300">
+        <section className="bg-neutral-800 text-white text-center py-4 text-5xl font-bold geo-regular hover:text-yellow-300 transition-colors duration-300 font-russo">
           <p>TIPS & TESTIMONIALS</p>
         </section>
 
@@ -91,7 +89,7 @@ export default function Home() {
                 alt="Store Banner"
                 className="w-full h-full object-cover transform group-hover:scale-105 transition duration-300"
               />
-              <h2 className="absolute inset-0 flex items-center justify-center text-white text-7xl font-bold geo-regular group-hover:text-yellow-300 transition-colors duration-300">
+              <h2 className="absolute inset-0 flex items-center justify-center text-white text-7xl font-bold geo-regular group-hover:text-yellow-300 transition-colors duration-300 font-russo">
                 SUPPORT AHA
               </h2>
             </div>
@@ -100,7 +98,7 @@ export default function Home() {
       </main>
 
       {/* Sticky Footer */}
-      <footer className="bg-neutral-800 text-white text-center text-sm py-6">
+      <footer className="bg-neutral-800 text-white text-center text-sm py-6 font-russo">
         <div className="max-w-7xl mx-auto flex flex-col items-center justify-center space-y-4">
           <img src="/aha_logo_txt.png" alt="AHA Logo" className="h-[60px] w-auto object-contain" />
           <div className="flex space-x-6">

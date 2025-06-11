@@ -1,54 +1,70 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
-import { useState } from 'react';
+import React from 'react';
 
 export default function ServicesPage() {
-    const [showPopup, setShowPopup] = useState(false);
-
   return (
-    <div className="min-h-screen flex flex-col justify-between">
-      <main className="flex flex-col items-center justify-start p-12 space-y-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <a href="https://coachedbyjonnainc.com/studentmerch" target="_blank" rel="noopener noreferrer" className="text-center">
-            <Image src="/store/aha-hoodie.png" alt="AHA Hoodie" width={500} height={500} />
-          </a>
-          <a href="https://coachedbyjonnainc.com/studentmerch" target="_blank" rel="noopener noreferrer" className="text-center">
-            <Image src="/store/aha-shirt.png" alt="AHA T-Shirt" width={500} height={500} />
-          </a>
-          <a href="https://coachedbyjonnainc.com/studentmerch" target="_blank" rel="noopener noreferrer" className="text-center">
-            <Image src="/store/sketchpad.png" alt="AHA Sketchpad" width={500} height={500} />
-          </a>
-        </div>
+    <div className="bg-black text-white min-h-screen flex flex-col justify-between text-center">
+      {/* Hero Image */}
+      <div className="relative w-full h-[60vh]">
+        <Image
+          src="/goatFarm_pic.jpg"
+          alt="AHA Hero"
+          layout="fill"
+          objectFit="cover"
+          className="grayscale"
+        />
+      </div>
 
-        <a href="https://coachedbyjonnainc.com/studentmerch" target="_blank" rel="noopener noreferrer">
-          <button className="text-xl bg-red-700 hover:bg-red-800 text-white py-4 px-8 rounded-xl shadow-lg transition">AHA Swag Shop</button>
-        </a>
+      {/* Content Section */}
+      <div className="max-w-5xl mx-auto px-4 py-12 space-y-6 font-geo text-lg text-center">
+        <h1 className="text-4xl font-bold text-yellow-400 mb-4">Welcome to Artistic Heights Academy!</h1>
+        <p>
+          Established in 2020, Artistic Heights Academy is a vibrant institution dedicated to cultivating and
+          empowering aspiring artists as they pursue careers in the entertainment industry. Located in the heart
+          of West Midtown Atlanta, we provide an encouraging and stimulating environment where performers can
+          refine their craft, build confidence, and reach new artistic heights.
+        </p>
+        <p>
+          Our mission is to inspire creativity and unlock each artist’s full potential, helping them reach new
+          artistic levels. We promote a safe, supportive, and stimulating environment where performers can refine
+          their craft, build confidence, and excel in the performing arts and entertainment sectors.
+        </p>
+        <p>
+          We are dedicated to encompassing, and upholding the values of: Individuality, Integrity, Creativity,
+          and Diversity — ensuring that every artist can thrive in a space that champions authentic expression
+          and artistic excellence.
+        </p>
+        <p className="font-bold italic text-white">
+          Artistic Heights Academy — where creativity, passion, and talent come to life!
+        </p>
+      </div>
 
-        <div onMouseEnter={() => setShowPopup(true)} onMouseLeave={() => setShowPopup(false)}>
-          <button className="text-xl bg-yellow-700 hover:bg-yellow-800 text-white py-4 px-8 rounded-xl shadow-lg transition">
-            Donate to AHA
-          </button>
-          {showPopup && (
-            <div className="mt-2 p-4 bg-gray-800 text-white text-sm rounded shadow-md text-center max-w-sm mx-auto">
-              Every Donation to AHA over $250 will receive an original piece of digital art from an AHA student.
-            </div>
-          )}
-        </div>
-      </main>
-
+      {/* Sticky Footer */}
       <footer className="bg-neutral-800 text-white text-center text-sm py-6">
         <div className="max-w-7xl mx-auto flex flex-col items-center justify-center space-y-4">
           <img src="/aha_logo_txt.png" alt="AHA Logo" className="h-[60px] w-auto object-contain" />
           <div className="flex space-x-6">
-            <a href="https://www.facebook.com/profile.php?id=61574999932660" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.facebook.com/profile.php?id=61574999932660"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src="/icons/facebook-logo_icon.png" alt="Facebook" className="h-6 w-6 hover:scale-110 transition" />
             </a>
-            <a href="https://www.instagram.com/artisticheightsacademy/" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.instagram.com/artisticheightsacademy/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src="/icons/instagram-logo_icon.png" alt="Instagram" className="h-6 w-6 hover:scale-110 transition" />
             </a>
-            <a href="https://www.linkedin.com/company/artistic-heights-academy/" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.linkedin.com/company/artistic-heights-academy/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src="/icons/linkedin-logo_icon.png" alt="LinkedIn" className="h-6 w-6 hover:scale-110 transition" />
             </a>
           </div>

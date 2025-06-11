@@ -4,8 +4,7 @@ export default function ContactPage() {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-neutral-800 to-black text-white font-[Geo]">
       <main className="flex-grow max-w-3xl mx-auto px-6 py-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-center mb-10">Contact Us</h1>
-
+      <h1 className="text-4xl md:text-5xl font-bold text-center mb-10 text-yellow-400">Contact Us</h1>
         <form className="space-y-6">
           <div>
             <label htmlFor="name" className="block text-sm mb-1">Name</label>

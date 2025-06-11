@@ -8,11 +8,10 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        'open-sans': ['"Open Sans"', 'sans-serif'],
-        sans: ['"Open Sans"', 'sans-serif'], // optional: override default
+        russo: ['"Russo One"', 'sans-serif'],
+        changa: ['"Changa One"', 'sans-serif'],
       },
-    },
-  },
+    }  },
   plugins: [],
 };
 

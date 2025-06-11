@@ -1,13 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa+One&family=Russo+One&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Add this to your global CSS file or use a CDN link in your HTML head */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Geo&display=swap');
+body {
+  font-family: 'Changa One', sans-serif;
+}
 
-.geo-regular {
-  font-family: 'Geo', sans-serif;
+h1, h2, h3, h4, h5 {
+  font-family: 'Russo One', sans-serif;
 }
 
 @keyframes marquee {

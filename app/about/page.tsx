@@ -22,6 +22,20 @@ export default function AboutPage() {
             GOAT FARM ARTS CENTER
           </a>
           , AHA equips students with a solid, versatile foundation by exposing them to multiple approaches, allowing them to discover and develop their own authentic acting voice. AHA vocational programs are designed to provide broad-based training experience grounded in a range of proven and widely respected acting methods, including Stanislavsky, Meisner, Chekhov, and more.
+          <div className="mb-6 space-y-4 text-center">
+  <p className="text-lg">
+    
+    Our mission is to inspire creativity and empower aspiring artists to unlock their full potential in performing arts to reach new artistic heights.
+    Through a holistic approach to artistic development, we cultivate performers to explore and discover their unique artistic voice via our 3-E Business Model:
+    <br />
+    <Link href="/elite-training" className="text-yellow-500 underline">Elite Training</Link>,{" "}
+    <Link href="/enrichment-options" className="text-yellow-500 underline">Enrichment Options</Link>,{" "}
+    & <Link href="/exclusive-experiences" className="text-yellow-500 underline">Exclusive Experiences</Link>.
+  </p>
+  <p className="text-lg">
+    Our vision is to provide a safe, supportive, and stimulating space where artists can thrive, empowering them to excel in both the performing arts and entertainment industries.
+  </p>
+</div>
         </p>
         {/* Link to Team Page */}
         <Link

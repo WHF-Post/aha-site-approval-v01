@@ -40,45 +40,73 @@ export default function ExclusiveExperiencesPage() {
   const [active, setActive] = useState<number | null>(null);
 
   return (
-    <div className="min-h-screen bg-black text-white px-4 pb-20 pt-24 flex flex-col items-center justify-start">
-      <h1 className="text-4xl font-bold mb-8">Exclusive Experiences</h1>
-      <p className="max-w-2xl text-center mb-10">
-        At Artistic Heights Academy, we offer more than just training—we offer transformative experiences that connect our students to real-world industry opportunities and career-shaping journeys.
-      </p>
+    <div className="flex flex-col min-h-screen">
+      <main className="px-4 pb-20 pt-24 max-w-5xl mx-auto text-center flex-grow">
+        <h1 className="text-4xl font-bold mb-8 text-yellow-400">Exclusive Experiences</h1>
+        <p className="max-w-2xl text-center mb-10">
+          At Artistic Heights Academy, we offer more than just training—we offer transformative experiences that connect our students to real-world industry opportunities and career-shaping journeys.
+        </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl w-full">
-        {experiences.map((exp, index) => (
-          <div
-            key={index}
-            className="bg-neutral-800 p-6 rounded-lg shadow-md flex flex-col items-center text-center"
-          >
-            <h2 className="text-xl font-semibold mb-4">{exp.title}</h2>
-            <button
-              onClick={() =>
-                exp.link ? (window.location.href = exp.link) : setActive(index)
-              }
-              className="mt-2 bg-white text-black font-bold px-4 py-2 rounded hover:bg-yellow-300 transition"
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl w-full">
+          {experiences.map((exp, index) => (
+            <div
+              key={index}
+              className="bg-neutral-800 p-6 rounded-lg shadow-md flex flex-col items-center text-center"
             >
-              {exp.cta}
-            </button>
-          </div>
-        ))}
-      </div>
-
-      {active !== null && (
-        <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 px-4">
-          <div className="bg-white text-black max-w-lg w-full p-6 rounded-lg shadow-lg relative">
-            <button
-              className="absolute top-2 right-2 text-black text-xl"
-              onClick={() => setActive(null)}
-            >
-              &times;
-            </button>
-            <h3 className="text-xl font-bold mb-4">{experiences[active].title}</h3>
-            <p className="whitespace-pre-line">{experiences[active].description}</p>
-          </div>
+              <h2 className="text-xl font-semibold mb-4">{exp.title}</h2>
+              <button
+                onClick={() =>
+                  exp.link ? (window.location.href = exp.link) : setActive(index)
+                }
+                className="mt-2 bg-white text-black font-bold px-4 py-2 rounded hover:bg-yellow-300 transition"
+              >
+                {exp.cta}
+              </button>
+            </div>
+          ))}
         </div>
-      )}
+
+        {active !== null && (
+          <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 px-4">
+            <div className="bg-white text-black max-w-lg w-full p-6 rounded-lg shadow-lg relative">
+              <button
+                className="absolute top-2 right-2 text-black text-xl"
+                onClick={() => setActive(null)}
+              >
+                &times;
+              </button>
+              <h3 className="text-xl font-bold mb-4">{experiences[active].title}</h3>
+              <p className="whitespace-pre-line">{experiences[active].description}</p>
+            </div>
+          </div>
+        )}
+      </main>
+
+      {/* Sticky Footer */}
+      <footer className="bg-neutral-800 text-white text-center text-sm py-6">
+        <div className="max-w-7xl mx-auto flex flex-col items-center justify-center space-y-4">
+          <img src="/aha_logo_txt.png" alt="AHA Logo" className="h-[60px] w-auto object-contain" />
+          <div className="flex space-x-6">
+            <a href="https://www.facebook.com/profile.php?id=61574999932660" target="_blank" rel="noopener noreferrer">
+              <img src="/icons/facebook-logo_icon.png" alt="Facebook" className="h-6 w-6 hover:scale-110 transition" />
+            </a>
+            <a href="https://www.instagram.com/artisticheightsacademy/" target="_blank" rel="noopener noreferrer">
+              <img src="/icons/instagram-logo_icon.png" alt="Instagram" className="h-6 w-6 hover:scale-110 transition" />
+            </a>
+            <a href="https://www.linkedin.com/company/artistic-heights-academy/" target="_blank" rel="noopener noreferrer">
+              <img src="/icons/linkedin-logo_icon.png" alt="LinkedIn" className="h-6 w-6 hover:scale-110 transition" />
+            </a>
+          </div>
+          <a
+            href="https://www.google.com/maps/place/1200+Foster+Street+NW,+Suite+220,+Atlanta,+GA+30318"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm hover:text-yellow-300 transition-colors duration-300"
+          >
+            1200 Foster Street NW, Suite 220, Atlanta, GA 30318
+          </a>
+        </div>
+      </footer>
     </div>
   );
 }
