@@ -40,10 +40,10 @@ export default function ExclusiveExperiencesPage() {
   const [active, setActive] = useState<number | null>(null);
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="min-h-screen bg-gradient-to-b from-neutral-800 to-black text-white flex flex-col items-center px-4 py-12">
       <main className="px-4 pb-20 pt-24 max-w-5xl mx-auto text-center flex-grow">
         <h1 className="text-4xl font-bold mb-8 text-yellow-400">Exclusive Experiences</h1>
-        <p className="max-w-2xl text-center mb-10">
+        <p className="max-w-4xl text-center mb-10">
           At Artistic Heights Academy, we offer more than just training—we offer transformative experiences that connect our students to real-world industry opportunities and career-shaping journeys.
         </p>
 
@@ -81,32 +81,6 @@ export default function ExclusiveExperiencesPage() {
           </div>
         )}
       </main>
-
-      {/* Sticky Footer */}
-      <footer className="bg-neutral-800 text-white text-center text-sm py-6">
-        <div className="max-w-7xl mx-auto flex flex-col items-center justify-center space-y-4">
-          <img src="/aha_logo_txt.png" alt="AHA Logo" className="h-[60px] w-auto object-contain" />
-          <div className="flex space-x-6">
-            <a href="https://www.facebook.com/profile.php?id=61574999932660" target="_blank" rel="noopener noreferrer">
-              <img src="/icons/facebook-logo_icon.png" alt="Facebook" className="h-6 w-6 hover:scale-110 transition" />
-            </a>
-            <a href="https://www.instagram.com/artisticheightsacademy/" target="_blank" rel="noopener noreferrer">
-              <img src="/icons/instagram-logo_icon.png" alt="Instagram" className="h-6 w-6 hover:scale-110 transition" />
-            </a>
-            <a href="https://www.linkedin.com/company/artistic-heights-academy/" target="_blank" rel="noopener noreferrer">
-              <img src="/icons/linkedin-logo_icon.png" alt="LinkedIn" className="h-6 w-6 hover:scale-110 transition" />
-            </a>
-          </div>
-          <a
-            href="https://www.google.com/maps/place/1200+Foster+Street+NW,+Suite+220,+Atlanta,+GA+30318"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm hover:text-yellow-300 transition-colors duration-300"
-          >
-            1200 Foster Street NW, Suite 220, Atlanta, GA 30318
-          </a>
-        </div>
-      </footer>
     </div>
   );
 }

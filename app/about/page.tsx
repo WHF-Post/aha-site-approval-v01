@@ -5,11 +5,11 @@ import Link from 'next/link';
 
 export default function AboutPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-b from-neutral-800 to-black text-white font-[Geo]">
+    <div className="flex flex-col min-h-screen bg-gradient-to-b from-neutral-800 to-black text-white font-Russo One">
       {/* Main Content */}
       <main className="flex-grow max-w-5xl mx-auto px-6 py-12 text-center">
         {/* Header */}
-        <h1 className="text-4xl md:text-5xl font-bold mb-6">About Artistic Heights Academy</h1>
+        <h1 className="text-5xl font-bold mb-8 text-center text-yellow-400">About Artistic Heights Academy</h1>
         {/* Paragraph */}
         <p className="text-lg md:text-xl mb-10 leading-relaxed max-w-3xl mx-auto">
           Located in the heart of West Midtown Atlanta in the{' '}
@@ -22,21 +22,20 @@ export default function AboutPage() {
             GOAT FARM ARTS CENTER
           </a>
           , AHA equips students with a solid, versatile foundation by exposing them to multiple approaches, allowing them to discover and develop their own authentic acting voice. AHA vocational programs are designed to provide broad-based training experience grounded in a range of proven and widely respected acting methods, including Stanislavsky, Meisner, Chekhov, and more.
-          <div className="mb-6 space-y-4 text-center">
-  <p className="text-lg">
-    
-    Our mission is to inspire creativity and empower aspiring artists to unlock their full potential in performing arts to reach new artistic heights.
-    Through a holistic approach to artistic development, we cultivate performers to explore and discover their unique artistic voice via our 3-E Business Model:
-    <br />
-    <Link href="/elite-training" className="text-yellow-500 underline">Elite Training</Link>,{" "}
-    <Link href="/enrichment-options" className="text-yellow-500 underline">Enrichment Options</Link>,{" "}
-    & <Link href="/exclusive-experiences" className="text-yellow-500 underline">Exclusive Experiences</Link>.
-  </p>
-  <p className="text-lg">
-    Our vision is to provide a safe, supportive, and stimulating space where artists can thrive, empowering them to excel in both the performing arts and entertainment industries.
-  </p>
-</div>
         </p>
+        <div className="mb-6 space-y-4 text-center">
+          <p className="text-lg">
+            Our mission is to inspire creativity and empower aspiring artists to unlock their full potential in performing arts to reach new artistic heights.
+            Through a holistic approach to artistic development, we cultivate performers to explore and discover their unique artistic voice via our 3-E Business Model:
+            <br />
+            <Link href="/elite-training" className="text-yellow-500 underline">Elite Training</Link>,{" "}
+            <Link href="/enrichment-options" className="text-yellow-500 underline">Enrichment Options</Link>,{" "}
+            & <Link href="/exclusive-experiences" className="text-yellow-500 underline">Exclusive Experiences</Link>.
+          </p>
+          <p className="text-lg">
+            Our vision is to provide a safe, supportive, and stimulating space where artists can thrive, empowering them to excel in both the performing arts and entertainment industries.
+          </p>
+        </div>
         {/* Link to Team Page */}
         <Link
           href="/team"
@@ -45,32 +44,6 @@ export default function AboutPage() {
           Meet the Team
         </Link>
       </main>
-
-      {/* Sticky Footer */}
-      <footer className="bg-neutral-800 text-white text-center text-sm py-6">
-        <div className="max-w-7xl mx-auto flex flex-col items-center justify-center space-y-4">
-          <img src="/aha_logo_txt.png" alt="AHA Logo" className="h-[60px] w-auto object-contain" />
-          <div className="flex space-x-6">
-            <a href="https://www.facebook.com/profile.php?id=61574999932660" target="_blank" rel="noopener noreferrer">
-              <img src="/icons/facebook-logo_icon.png" alt="Facebook" className="h-6 w-6 hover:scale-110 transition" />
-            </a>
-            <a href="https://www.instagram.com/artisticheightsacademy/" target="_blank" rel="noopener noreferrer">
-              <img src="/icons/instagram-logo_icon.png" alt="Instagram" className="h-6 w-6 hover:scale-110 transition" />
-            </a>
-            <a href="https://www.linkedin.com/company/artistic-heights-academy/" target="_blank" rel="noopener noreferrer">
-              <img src="/icons/linkedin-logo_icon.png" alt="LinkedIn" className="h-6 w-6 hover:scale-110 transition" />
-            </a>
-          </div>
-          <a
-            href="https://www.google.com/maps/place/1200+Foster+Street+NW,+Suite+220,+Atlanta,+GA+30318"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm hover:text-yellow-300 transition-colors duration-300"
-          >
-            1200 Foster Street NW, Suite 220, Atlanta, GA 30318
-          </a>
-        </div>
-      </footer>
     </div>
   );
 }

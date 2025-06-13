@@ -4,7 +4,7 @@ export default function BCPPage() {
   return (
     <div className="min-h-screen bg-black text-white flex flex-col items-center px-4 pt-24 pb-16">
       <Image
-        src="/bcp_logo_heart_white.png" // ✅ this is the correct way to reference public assets
+        src="/bcp_logo_heart_white.png"
         alt="BCP Logo"
         width={400}
         height={400}
@@ -27,6 +27,15 @@ export default function BCPPage() {
         <p>
           Therefore, Artistic Heights Academy aims to honor the late Bryce Christopher Pitts’ legacy by naming the LA MCE sponsorship opportunity the BCP Scholarship. This scholarship is designed to empower one aspiring artist to follow their dreams and achieve their fullest artistic potential.
         </p>
+        <div className="flex justify-center">
+          <Image
+            src="/Bryce.png"
+            alt="Bryce Christopher Pitts"
+            width={280}
+            height={380}
+            className="mb-6 drop-shadow-xl object-contain opacity-0 animate-float-in"
+          />
+        </div>
       </div>
     </div>
   );

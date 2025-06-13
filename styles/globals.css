@@ -4,11 +4,11 @@
 @tailwind utilities;
 
 body {
-  font-family: 'Changa One', sans-serif;
+  font-family: 'Changa One', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Russo One', sans-serif;
+  font-family: 'Russo One', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 @keyframes marquee {
