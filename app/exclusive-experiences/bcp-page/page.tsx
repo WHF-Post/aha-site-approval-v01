@@ -4,10 +4,10 @@ export default function BCPPage() {
   return (
     <div className="min-h-screen bg-black text-white flex flex-col items-center px-4 pt-24 pb-16">
       <Image
-        src="/bcp_logo_heart_white.png"
-        alt="BCP Logo"
-        width={400}
-        height={400}
+        src="/bcp_white.png"
+        alt="bcp_white"
+        width={500}
+        height={500}
         className="mb-6"
       />
       <div className="max-w-3xl text-center">
