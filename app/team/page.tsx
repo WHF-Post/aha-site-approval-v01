@@ -34,6 +34,16 @@ Since becoming Principal at Nativity School of Harrisburg, Muhammad has focused 
 
 Through his dedication and leadership at Nativity School of Harrisburg, Lavelle Muhammad exemplifies how personal experiences can fuel professional passion, ultimately transforming lives through education.`,
   },
+{
+  name: 'Charles White',
+  title: 'Content Director',
+  bio: `Bringing decades of experience in video editing, storytelling, and arts education, Charles blends industry knowledge with hands-on training to guide students in mastering digital storytelling tools and developing their unique voice. He is also the founder of Whitehouse Films, where he has produced award-winning documentaries, branded content, and educational media.`
+},
+{
+  name: 'W. Devoe',
+  title: 'HR Director',
+  bio: `W. Devoe brings a wealth of experience and dedication to her role as HR Director at Artistic Heights Academy. With a passion for cultivating creative talent and building strong organizational culture, she plays a vital role in supporting the Academy’s mission and growth. Her full story and impact are still unfolding — more to come!`
+}
 ];
 
 export default function TeamPage() {

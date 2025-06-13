@@ -56,10 +56,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* BCP Foundation Bar */}
+      {/* BCP Scholarship Bar */}
       <Link href="/exclusive-experiences/bcp-page">
         <section className="bg-neutral-800 text-white text-center py-4 text-5xl font-bold geo-regular hover:text-yellow-300 transition-colors duration-300 font-russo cursor-pointer">
-          <p>BCP Foundation</p>
+          <p>BCP Scholarship</p>
         </section>
       </Link>
 

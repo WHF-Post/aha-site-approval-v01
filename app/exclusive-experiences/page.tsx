@@ -20,7 +20,7 @@ Perfect your craft, expand your network, and gain a competitive edge in the acti
 
 The 2025 LA Mastersclass Experience is now sold out!
 
-It is with great honor that The Artistic Heights Academy Foundation will sponsor one additional deserving, aspiring, and talented artist to attend the 2025 LA Masters Class Experience (LAMCE). This year’s sponsorship is in recognition of the late Bryce Christopher Pitts and will be referred to as the 2025 BCP Scholarship. This opportunity will be awarded to an individual looking to reach their highest artistic potential.`,
+It is with great honor that Artistic Heights Academy will sponsor one additional deserving, aspiring, and talented artist to attend the 2025 LA Masters Class Experience (LAMCE). This year’s sponsorship is in recognition of the late Bryce Christopher Pitts and will be referred to as the 2025 BCP Scholarship. This opportunity will be awarded to an individual looking to reach their highest artistic potential.`,
     cta: 'Apply Now',
   },
   {
@@ -29,8 +29,8 @@ It is with great honor that The Artistic Heights Academy Foundation will sponsor
     cta: 'Learn More',
   },
   {
-    title: 'BCP Foundation',
-    description: `Learn more about the BCP Foundation and the inspiring legacy of Bryce Christopher Pitts.`,
+    title: 'BCP Scholarship',
+    description: `Learn more about the BCP Scholarship and the inspiring legacy of Bryce Christopher Pitts.`,
     cta: 'Learn More',
     link: '/exclusive-experiences/bcp-page',
   },

@@ -23,8 +23,7 @@ export default function Footer() {
               alt="Facebook"
               width={24}
               height={24}
-              className="hover:scale-110 transition"
-            />
+              className="h-6 w-6 filter invert hover:scale-110 transition"            />
           </a>
           <a
             href="https://www.instagram.com/artisticheightsacademy/"
@@ -36,7 +35,7 @@ export default function Footer() {
               alt="Instagram"
               width={24}
               height={24}
-              className="hover:scale-110 transition"
+              className="h-6 w-6 filter invert hover:scale-110 transition"
             />
           </a>
           <a
@@ -49,7 +48,7 @@ export default function Footer() {
               alt="LinkedIn"
               width={24}
               height={24}
-              className="hover:scale-110 transition"
+              className="h-6 w-6 filter invert hover:scale-110 transition"
             />
           </a>
         </div>

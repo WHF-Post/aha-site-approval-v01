@@ -9,23 +9,45 @@ export default function StorePage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-neutral-800 to-black text-white flex flex-col justify-between">
-      <main className="flex flex-col items-center justify-start p-12 space-y-12">
+      <main className="flex flex-col items-center justify-start p-12 space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <a href="https://coachedbyjonnainc.com/studentmerch" target="_blank" rel="noopener noreferrer" className="text-center">
+          <a
+            href="https://coachedbyjonnainc.com/studentmerch"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-center"
+          >
             <Image src="/store/aha-hoodie.png" alt="AHA Hoodie" width={500} height={500} />
           </a>
-          <a href="https://coachedbyjonnainc.com/studentmerch" target="_blank" rel="noopener noreferrer" className="text-center">
+          <a
+            href="https://coachedbyjonnainc.com/studentmerch"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-center"
+          >
             <Image src="/store/aha-shirt.png" alt="AHA T-Shirt" width={500} height={500} />
           </a>
-          <a href="https://coachedbyjonnainc.com/studentmerch" target="_blank" rel="noopener noreferrer" className="text-center">
+          <a
+            href="https://coachedbyjonnainc.com/studentmerch"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-center"
+          >
             <Image src="/store/sketchpad.png" alt="AHA Sketchpad" width={500} height={500} />
           </a>
         </div>
 
-        <a href="https://coachedbyjonnainc.com/studentmerch" target="_blank" rel="noopener noreferrer">
-          <button className="text-xl bg-red-700 hover:bg-red-800 text-white py-4 px-8 rounded-xl shadow-lg transition">AHA Swag Shop</button>
+        <a
+          href="https://coachedbyjonnainc.com/studentmerch"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="text-xl bg-red-700 hover:bg-red-800 text-white py-4 px-8 rounded-xl shadow-lg transition">
+            AHA Swag Shop
+          </button>
         </a>
 
+        {/* 
         <div
           onMouseEnter={() => setShowPopup(true)}
           onMouseLeave={() => setShowPopup(false)}
@@ -38,6 +60,7 @@ export default function StorePage() {
             </div>
           )}
         </div>
+        */}
       </main>
     </div>
   );
