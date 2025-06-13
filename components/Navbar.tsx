@@ -8,8 +8,8 @@ import { useRouter, usePathname } from 'next/navigation'; // Import usePathname
 import Image from 'next/image';
 
 export default function Navbar() {
-  const [user, setUser] = useState(null);
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [user, setUser] = useState<null | any>(null); // Replace `any` with the correct Firebase user type
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const router = useRouter();
   const pathname = usePathname(); // Get the current route
 
