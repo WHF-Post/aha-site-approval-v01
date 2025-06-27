@@ -6,7 +6,7 @@ import Navbar from '@/components/Navbar';
 export default function HomePage() {
   return (
     <main className="flex-grow bg-black text-white font-sans">
-      <Navbar />
+    
       <section className="relative w-full h-screen bg-gradient-to-b from-[#1a1a1a] via-[#242424] to-[#1a1a1a]">
         <video
           className="absolute top-0 left-0 w-full h-full object-contain pointer-events-none z-0"
