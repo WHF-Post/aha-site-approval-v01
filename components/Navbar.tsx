@@ -31,7 +31,16 @@ export default function Navbar() {
           <li><Link className="hover:text-yellow-400" href="#">Tips & Testimonials</Link></li>
           <li><Link className="hover:text-yellow-400" href="#">Support</Link></li>
           <li><Link className="hover:text-yellow-400" href="/contact">Contact</Link></li>
-          <li><Link className="hover:text-yellow-400" href="/shop">Shop</Link></li>
+          <li>
+            <a
+              className="hover:text-yellow-400"
+              href="https://coachedbyjonnainc.com/studentmerch"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Shop
+            </a>
+          </li>
           <li><Link className="hover:text-yellow-400" href="/login">Login</Link></li>
         </ul>
 
@@ -47,17 +56,61 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <ul className="md:hidden mt-2 space-y-2 text-sm font-medium">
-          <li><Link className="hover:text-yellow-400 block" href="/about">About</Link></li>
-          <li><Link className="hover:text-yellow-400 block" href="/elite-training">Elite Training</Link></li>
-          <li><Link className="hover:text-yellow-400 block" href="/enrichment-options">Enrichment</Link></li>
-          <li><Link className="hover:text-yellow-400 block" href="/exclusive-experiences">Experiences</Link></li>
-          <li><Link className="hover:text-yellow-400 block" href="#">Tips & Testimonials</Link></li>
-          <li><Link className="hover:text-yellow-400 block" href="#">Support</Link></li>
-          <li><Link className="hover:text-yellow-400 block" href="/contact">Contact</Link></li>
-          <li><Link className="hover:text-yellow-400 block" href="/shop">Shop</Link></li>
-          <li><Link className="hover:text-yellow-400 block" href="/login">Login</Link></li>
-        </ul>
+        <div className="absolute top-12 left-1/2 transform -translate-x-1/2 w-64 bg-neutral-900 text-white p-4 rounded-md shadow-lg z-50">
+          <ul className="md:hidden space-y-2 text-sm font-medium">
+            <li>
+              <Link className="hover:text-yellow-400 block" href="/about" onClick={() => setIsOpen(false)}>
+                About
+              </Link>
+            </li>
+            <li>
+              <Link className="hover:text-yellow-400 block" href="/elite-training" onClick={() => setIsOpen(false)}>
+                Elite Training
+              </Link>
+            </li>
+            <li>
+              <Link className="hover:text-yellow-400 block" href="/enrichment-options" onClick={() => setIsOpen(false)}>
+                Enrichment
+              </Link>
+            </li>
+            <li>
+              <Link className="hover:text-yellow-400 block" href="/exclusive-experiences" onClick={() => setIsOpen(false)}>
+                Experiences
+              </Link>
+            </li>
+            <li>
+              <Link className="hover:text-yellow-400 block" href="#" onClick={() => setIsOpen(false)}>
+                Tips & Testimonials
+              </Link>
+            </li>
+            <li>
+              <Link className="hover:text-yellow-400 block" href="#" onClick={() => setIsOpen(false)}>
+                Support
+              </Link>
+            </li>
+            <li>
+              <Link className="hover:text-yellow-400 block" href="/contact" onClick={() => setIsOpen(false)}>
+                Contact
+              </Link>
+            </li>
+            <li>
+              <a
+                className="hover:text-yellow-400 block"
+                href="https://coachedbyjonnainc.com/studentmerch"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsOpen(false)}
+              >
+                Shop
+              </a>
+            </li>
+            <li>
+              <Link className="hover:text-yellow-400 block" href="/login" onClick={() => setIsOpen(false)}>
+                Login
+              </Link>
+            </li>
+          </ul>
+        </div>
       )}
     </nav>
   );
