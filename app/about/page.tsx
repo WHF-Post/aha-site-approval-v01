@@ -6,6 +6,20 @@ import Link from 'next/link';
 export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-neutral-800 to-black text-white font-Russo One">
+      {/* YouTube Video */}
+      <div className="w-full flex justify-center pt-8">
+        <div className="relative w-full max-w-2xl aspect-video">
+          <iframe
+            className="absolute top-0 left-0 w-full h-full rounded-lg"
+            src="https://www.youtube.com/embed/QU0AC1MYB6w?si=a8V4dM6jsNh8uTNh"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          ></iframe>
+        </div>
+      </div>
       {/* Main Content */}
       <main className="flex-grow max-w-5xl mx-auto px-6 py-12 text-center">
         {/* Header */}

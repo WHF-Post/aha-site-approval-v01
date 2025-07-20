@@ -11,7 +11,7 @@ export default function BCPPage() {
         className="mb-6"
       />
       <div className="max-w-3xl text-center">
-        <h1 className="text-4xl font-bold mb-6">Honoring Bryce Christopher Pitts</h1>
+        <h1 className="text-4xl font-bold mb-6 text-yellow-400">Honoring Bryce Christopher Pitts</h1>
         <p className="mb-4">
           At the tender age of 22, Bryce Christopher Pitts was involved in a fatal car accident and transitioned. He was an awesome son, brother, nephew, cousin, student, and reliable friend to all. Bryce had a heart of pure gold and was willing to help anyone in their time of need.
         </p>

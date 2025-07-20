@@ -20,3 +20,80 @@ h1, h2, h3, h4, h5 {
   animation: marquee 60s linear infinite;
   display: inline-flex;
 }
+
+/* === Team Card Hover Effect === */
+.team-card {
+  position: relative;
+  width: 300px;
+  margin: 20px auto;
+  text-align: center;
+  color: white;
+  font-family: sans-serif;
+}
+
+.profile-frame {
+  border-radius: 50%;
+  border: 5px solid yellow;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  transition: opacity 0.4s ease;
+}
+
+.bio-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+}
+
+.bio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 6rem; /* adjust to clear your */
+}
+
+.card-hover:hover .bio-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.card-hover:hover .profile-frame {
+  opacity: 0;
+}
+
+.card-hover:hover .bio-text {
+  opacity: 1;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .team-card {
+    width: 90%;
+  }
+  .profile-frame {
+    width: 120px;
+    height: 120px;
+  }
+  .bio-text {
+    font-size: 0.8rem;
+    padding: 16px;
+  }
+}
