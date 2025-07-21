@@ -15,7 +15,7 @@ export default function Navbar() {
         <Link href="/">
           <Image
             src="/aha_logo.png"
-            alt="Artistic Heights Academy Logo"
+            alt="/aha_logo_txt.png"
             width={50}
             height={50}
             className="object-contain"
