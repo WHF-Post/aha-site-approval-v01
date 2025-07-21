@@ -1,16 +1,5 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/elite-training/page": "app/elite-training/page.js",
-  "/contact/page": "app/contact/page.js",
-  "/about/page": "app/about/page.js",
-  "/login/page": "app/login/page.js",
   "/page": "app/page.js",
-  "/register/page": "app/register/page.js",
-  "/services/page": "app/services/page.js",
-  "/team/page": "app/team/page.js",
-  "/exclusive-experiences/page": "app/exclusive-experiences/page.js",
-  "/enrichment-options/page": "app/enrichment-options/page.js",
-  "/store/page": "app/store/page.js",
-  "/testimonials/page": "app/testimonials/page.js",
-  "/exclusive-experiences/bcp-page/page": "app/exclusive-experiences/bcp-page/page.js"
+  "/testimonials/page": "app/testimonials/page.js"
 }

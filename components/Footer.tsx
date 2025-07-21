@@ -19,7 +19,7 @@ export default function Footer() {
             rel="noopener noreferrer"
           >
             <Image
-              src="/icons/facebook-logo_icon.png"
+              src="/facebook-logo_icon.png"
               alt="Facebook"
               width={24}
               height={24}
@@ -31,7 +31,7 @@ export default function Footer() {
             rel="noopener noreferrer"
           >
             <Image
-              src="/icons/instagram-logo_icon.png"
+              src="/instagram-logo_icon.png"
               alt="Instagram"
               width={24}
               height={24}
@@ -44,7 +44,7 @@ export default function Footer() {
             rel="noopener noreferrer"
           >
             <Image
-              src="/icons/linkedin-logo_icon.png"
+              src="/linkedin-logo_icon.png"
               alt="LinkedIn"
               width={24}
               height={24}

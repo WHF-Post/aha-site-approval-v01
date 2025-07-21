@@ -3,14 +3,14 @@
 import Image from 'next/image';
 
 const imagePaths = [
-  '/testimonial/Testimonials1.jpg',
-  '/testimonial/Testimonials2.jpg',
-  '/testimonial/Testimonials3.jpg',
-  '/testimonial/Testimonials5.jpg',
-  '/testimonial/Testimonials4.jpg',
-  '/testimonial/Testimonials6.jpg',
-  '/testimonial/Testimonials7.jpg',
-  '/testimonial/Testimonials8.jpg',
+  '/Testimonials1.jpg',
+  '/Testimonials2.jpg',
+  '/Testimonials3.jpg',
+  '/Testimonials4.jpg',
+  '/Testimonials5.jpg',
+  '/Testimonials6.jpg',
+  '/Testimonials7.jpg',
+  '/Testimonials8.jpg',
 ];
 
 export default function TestimonialsPage() {
@@ -21,10 +21,10 @@ export default function TestimonialsPage() {
           Tips & Testimonials
         </h1>
         <div className="flex flex-col items-center gap-10">
-          {imagePaths.map((_, idx) => (
+          {imagePaths.map((path, idx) => (
             <Image
               key={idx}
-              src={`/testimonial/Testimonials${idx + 1}.jpg`}
+              src={path}
               alt={`Testimonial ${idx + 1}`}
               width={800}
               height={500}
