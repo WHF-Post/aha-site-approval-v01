@@ -10,6 +10,16 @@ export default function TeamPage() {
 
   const team = [
     {
+      name: "Jonna Naegele",
+      title: "Founder",
+      imageSrc: "/Jonna Naegele.png",
+      bio: `Jonna Naegele is the visionary founder of Artistic Heights Academy, a premier institution dedicated to nurturing talent and fostering artistic creativity.
+
+Jonna Naegele, a renowned American acting coach, producer, and advocate for actors, has spent 16 years empowering individuals to tap into their creative potential and embrace personal growth. With a wealth of experience in nurturing raw talent and guiding aspiring artists, Jonna has honed her ability to perceive and draw out the unique qualities that define each individual. Through her work as a certified life coach, she has developed a deep understanding of the human condition, emphasizing the importance of self-discovery and empathy in the pursuit of artistic excellence.
+
+Driven by a passion for cultural exchange and diversity, Jonna aspires to expand her impact internationally, particularly in Africa and other regions where she already works with students and clients. Her dedication to helping others find their voices and tell their stories is intertwined with a commitment to understanding culturally specific values and beliefs through the study of philosophy. By bridging the gap between different backgrounds and perspectives, Jonna is poised to foster connections and empower individuals from diverse communities to express themselves authentically in the entertainment industry and beyond.`,
+    },
+    {
       name: "Katrina Pitts",
       title: "President & CEO",
       imageSrc: "/circular_Katrina Pitts.png",
