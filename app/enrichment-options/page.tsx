@@ -20,15 +20,8 @@ export default function EnrichmentOptions() {
             onClick={() => setShowInternPopup(true)}
             className="bg-neutral-800 text-white text-2xl px-8 py-6 rounded-xl font-russo hover:bg-yellow-400 transition"
           >
-            Internships
+            Internship Opportunities
           </button>
-
-          <Link
-            href="https://coachedbyjonnainc.com/actingclassesandbooks?category=Class"
-            className="bg-neutral-800 text-white text-2xl px-8 py-6 rounded-xl font-russo hover:bg-yellow-400 transition"
-          >
-            Private Coaching
-          </Link>
 
           <Link
             href="https://coachedbyjonnainc.com/actingclassesandbooks"

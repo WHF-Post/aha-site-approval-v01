@@ -29,7 +29,7 @@ export default function Navbar() {
           <li><Link className="hover:text-yellow-400" href="/enrichment-options">Enrichment</Link></li>
           <li><Link className="hover:text-yellow-400" href="/exclusive-experiences">Experiences</Link></li>
           <li><Link className="hover:text-yellow-400" href="/testimonials">Tips & Testimonials</Link></li>
-          <li><Link className="hover:text-yellow-400" href="#">Support</Link></li>
+          <li><Link className="hover:text-yellow-400" href="/support">Support</Link></li>
           <li><Link className="hover:text-yellow-400" href="/contact">Contact</Link></li>
           <li>
             <a
@@ -84,7 +84,7 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
-              <Link className="hover:text-yellow-400 block" href="#" onClick={() => setIsOpen(false)}>
+              <Link className="hover:text-yellow-400 block" href="/support" onClick={() => setIsOpen(false)}>
                 Support
               </Link>
             </li>
