@@ -6,77 +6,56 @@ const trainingOptions = [
 	{
 		title: 'On-Camera Training',
 		description: 'Master the fundamentals of performance, poise, and projection.',
-		cta: 'Sign Up',
-		url: 'https://forms.fillout.com/t/oFkCqDRBKxus',
-	},
-	{
-		title: 'Voice Over Training',
-		description: 'Refine your vocal presence for stage and screen.',
-		cta: 'Coming Soon!',
-	},
-	{
-		title: 'Audition Prep',
-		description: 'Get insider tips and reps to nail cold reads and produce self-tapes.',
-		cta: 'Coming Soon!',
 	}
 ];
 
 export default function Elite_Training() {
-	const [active, setActive] = useState<number | null>(null);
+	const [showComingSoon, setShowComingSoon] = useState(false);
 
 	return (
 		<div className="flex flex-col min-h-screen bg-gradient-to-b from-neutral-800 to-black">
 			<main className="px-4 py-16 max-w-5xl mx-auto text-center flex-grow">
 				<h1 className="text-5xl font-bold mb-8 text-center text-yellow-400">Elite Training</h1>
 				<p className="text-lg mb-6 text-white">
-					At Artistic Heights Academy, we believe talent is just the beginning. Whether you’re stepping in
-					front of the camera or leading from behind it, our enrichment programs are designed to sharpen
-					your craft, deepen your industry insight, and prepare you for lasting success in entertainment
-					and creative industries.
-				</p>
-				<p className="text-lg mb-6 text-white">
-					Our instruction is delivered by a dynamic team of working professionals—actors, producers,
-					editors, coaches, and creatives—who bring real-world experience and a commitment to developing
-					confident, capable artists and storytellers.
+				At Artistic Heights Academy, our acting classes are designed as a three-month immersive development program that lays the foundation of acting by integrating techniques from Meisner, Stanislavsky, and other famous acting teachers and legends.
+				Through an engaging blend of instruction, exercises, discussions, and performances, students cultivate essential skills that enhance their craft and refine their artistic expression.
+
 				</p>
 
-				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
 					{trainingOptions.map((option, index) => (
 						<div
 							key={index}
-							className="bg-[#1f1f1f] p-6 rounded-lg text-center border border-gray-700 hover:border-yellow-400 transition cursor-pointer"
-							onClick={() => setActive(index)}
+							className="bg-[#1f1f1f] p-6 rounded-lg text-center border border-gray-700 hover:border-yellow-400 transition"
 						>
 							<h2 className="text-2xl font-semibold text-white russo">{option.title}</h2>
+							<p className="mt-4 text-white">{option.description}</p>
 						</div>
 					))}
 				</div>
 
-				{active !== null && (
-					<div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
-						<div className="bg-[#111] border border-gray-600 p-8 rounded-lg max-w-md text-center relative">
+				{/* Off Camera Training Button */}
+				<div className="flex justify-center">
+					<button
+						onClick={() => setShowComingSoon(true)}
+						className="px-10 py-4 bg-white text-black font-semibold rounded-2xl shadow-lg hover:bg-yellow-500 transition text-xl"
+					>
+						Off Camera Training
+					</button>
+				</div>
+
+				{/* Coming Soon Popup */}
+				{showComingSoon && (
+					<div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
+						<div className="bg-white text-black p-8 rounded-xl max-w-md text-center relative">
 							<button
-								onClick={() => setActive(null)}
-								className="absolute top-2 right-3 text-white text-xl hover:text-yellow-400"
+								onClick={() => setShowComingSoon(false)}
+								className="absolute top-2 right-3 text-black text-xl hover:text-yellow-400"
 							>
 								&times;
 							</button>
-							<h2 className="text-2xl font-semibold mb-4 text-white geo-regular">
-								{trainingOptions[active].title}
-							</h2>
-							<p className="mb-6 text-lg text-white">{trainingOptions[active].description}</p>
-							{trainingOptions[active].url ? (
-								<a
-									href={trainingOptions[active].url}
-									target="_blank"
-									rel="noopener noreferrer"
-									className="bg-yellow-400 text-white px-6 py-2 rounded hover:bg-yellow-500 font-semibold transition inline-block"
-								>
-									{trainingOptions[active].cta}
-								</a>
-							) : (
-								<div className="text-yellow-400 text-xl font-bold mb-2">Coming Soon!</div>
-							)}
+							<h2 className="text-2xl font-bold mb-4">Coming Soon</h2>
+							<p className="mb-4">Off Camera Training will be available soon. Stay tuned!</p>
 						</div>
 					</div>
 				)}

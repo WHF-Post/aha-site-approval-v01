@@ -24,30 +24,24 @@ export default function AboutPage() {
       <main className="flex-grow max-w-5xl mx-auto px-6 py-12 text-center">
         {/* Header */}
         <h1 className="text-5xl font-bold mb-8 text-center text-yellow-400">About Artistic Heights Academy</h1>
-        {/* Paragraph */}
+        {/* Updated Paragraph */}
         <p className="text-lg md:text-xl mb-10 leading-relaxed max-w-3xl mx-auto">
-          Located in the heart of West Midtown Atlanta in the{' '}
-          <a
-            href="https://www.thegoatfarm.info/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-yellow-400 hover:text-yellow-500 transition"
-          >
-            GOAT FARM ARTS CENTER
-          </a>
-          , AHA equips students with a solid, versatile foundation by exposing them to multiple approaches, allowing them to discover and develop their own authentic acting voice. AHA vocational programs are designed to provide broad-based training experience grounded in a range of proven and widely respected acting methods, including Stanislavsky, Meisner, Chekhov, and more.
+          Located in the heart of West Midtown Atlanta, Artistic Heights Academy (AHA) equips and empowers emerging artists to thrive in the entertainment industry through elite training, immersive enrichment, and transformative experiences that forges holistic creative growth. We provide a safe, supportive, and stimulating space where creatives can find their authentic and artistic voice.
+          <br /><br />
+          Every experience at Artistic Heights is intentionally designed to challenge boundaries and ignite potential. We go beyond instruction—elevating, connecting, and championing the next generation of artistic leaders. By expanding access to entertainment culture and fostering excellence, we build enduring pathways for artists to lead, influence, and thrive in a dynamic and creative landscape. At AHA, artistry meets strategy—and transformation begins.
         </p>
-        <div className="mb-6 space-y-4 text-center">
+        <div className="mb-6 space-y-6 text-center">
           <p className="text-lg">
-            Our mission is to inspire creativity and empower aspiring artists to unlock their full potential in performing arts to reach new artistic heights.
-            Through a holistic approach to artistic development, we cultivate performers to explore and discover their unique artistic voice via our 3-E Business Model:
-            <br />
-            <Link href="/elite-training" className="text-yellow-500 underline">Elite Training</Link>,{" "}
-            <Link href="/enrichment-options" className="text-yellow-500 underline">Enrichment Options</Link>,{" "}
-            & <Link href="/exclusive-experiences" className="text-yellow-500 underline">Exclusive Experiences</Link>.
+            <Link href="/elite-training" className="font-bold text-yellow-400 hover:text-yellow-500 transition">Elite Training:</Link>
+            <span> Our curriculum integrates respected industry techniques into disciplines like acting, voiceover, production, and more—enhancing emotional depth and artistic versatility.</span>
           </p>
           <p className="text-lg">
-            Our vision is to provide a safe, supportive, and stimulating space where artists can thrive, empowering them to excel in both the performing arts and entertainment industries.
+            <Link href="/enrichment-options" className="font-bold text-yellow-400 hover:text-yellow-500 transition">Enrichment Programs:</Link>
+            <span> Through high-impact workshops, curated events, and collaborative projects, we cultivate talent and inspire creators to rise with clarity, confidence and purpose.</span>
+          </p>
+          <p className="text-lg">
+            <Link href="/exclusive-experiences" className="font-bold text-yellow-400 hover:text-yellow-500 transition">Exclusive Experiences:</Link>
+            <span> Students receive personalized mentorship and strategic guidance, gaining access to professional networks and exclusive opportunities that accelerate their development.</span>
           </p>
         </div>
         {/* Link to Team Page */}

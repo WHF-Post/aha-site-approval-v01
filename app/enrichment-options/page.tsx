@@ -9,11 +9,15 @@ export default function EnrichmentOptions() {
   return (
     <div className="min-h-screen flex flex-col justify-between bg-gradient-to-b from-neutral-800 to-black text-white">
       <div className="py-12 px-6 flex flex-col items-center justify-start space-y-10">
-        <h1 className="text-5xl font-bold mb-8 text-center text-yellow-400">Enrichment Options</h1>
+        <h1 className="text-5xl font-bold mb-8 text-center text-yellow-400">Enrichment Programs</h1>
 
         <p className="px-20 text-lg mb-6 text-center">
-          At Artistic Heights Academy, our acting classes are designed as a three-month immersive development program that lays the foundation of acting by integrating techniques from Meisner, Stanislavsky, and other famous acting teachers and legends. Through an engaging blend of instruction, exercises, discussions, and performances, students cultivate essential skills that enhance their craft and refine their artistic expression.
-        </p>
+          At Artistic Heights Academy, we believe talent is just the beginning. Whether you’re stepping in
+					front of the camera or leading from behind it, our enrichment programs are designed to sharpen
+					your craft, deepen your industry insight, and prepare you for lasting success in entertainment
+					and creative industries.
+				</p>
+ 
 
         <div className="flex flex-col md:flex-row gap-6 items-center">
           <button

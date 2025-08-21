@@ -22,7 +22,7 @@ export default function Support() {
             <h1 className="text-5xl font-bold text-yellow-400">
               Support Artistic Heights Academy
               <br />
-              <br />
+              <br /> 
               <br />
             </h1>
             <p className="text-lg text-white mt-4 max-w-2xl">
