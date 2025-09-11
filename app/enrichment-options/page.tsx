@@ -31,7 +31,7 @@ export default function EnrichmentOptions() {
             href="https://form.fillout.com/t/1itS8711paus"
             className="bg-neutral-800 text-white text-2xl px-4 py-6 rounded-xl font-russo hover:bg-yellow-400 transition"
           >
-            Educational Resources
+            The Actor’s Edge Workshops
           </Link>
         </div>
 
