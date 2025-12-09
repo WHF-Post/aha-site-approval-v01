@@ -38,12 +38,12 @@ export default function StorePage() {
         </div>
 
         <a
-          href="https://coachedbyjonnainc.com/studentmerch"
+          href="https://form.fillout.com/t/jpHEoE31rcus"
           target="_blank"
           rel="noopener noreferrer"
         >
           <button className="text-xl bg-red-700 hover:bg-red-800 text-white py-4 px-8 rounded-xl shadow-lg transition">
-            AHA Swag Shop
+            Make a Contribution
           </button>
         </a>
 
