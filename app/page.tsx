@@ -74,7 +74,7 @@ export default function HomePage() {
 
       {/* Store Banner */}
       <section className="relative w-full max-h-[400px] overflow-hidden -mt-4">
-        <a href="/store" className="group relative block w-full h-full">
+        <a href="https://www.artisticheightsacademy.com/support" className="group relative block w-full h-full">
           <div className="relative w-full h-full overflow-hidden">
             <img
               src="/img7-store.png"

@@ -3,13 +3,20 @@ import Image from 'next/image';
 export default function BCPPage() {
   return (
     <div className="min-h-screen bg-black text-white flex flex-col items-center px-4 pt-24 pb-16">
-      <Image
-        src="/bcp_white.png"
-        alt="bcp_white"
-        width={500}
-        height={500}
-        className="mb-6"
-      />
+      <a
+        href="https://form.fillout.com/t/jpHEoE31rcus"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:opacity-80 transition-opacity"
+      >
+        <Image
+          src="/bcp_white.png"
+          alt="bcp_white"
+          width={500}
+          height={500}
+          className="mb-6 cursor-pointer"
+        />
+      </a>
       <div className="max-w-3xl text-center">
         <h1 className="text-4xl font-bold mb-6 text-yellow-400">Honoring Bryce Christopher Pitts</h1>
         <p className="mb-4">
@@ -25,16 +32,23 @@ export default function BCPPage() {
           In his brief 22 years, Bryce profoundly influenced many lives. His family believes that the most fitting tribute to him and his legacy is to perpetuate the love, help, assistance, and support that Bryce exemplified. Bryce's essence continues to reside within us, and his light will eternally serve as a guiding star to all.
         </p>
         <p>
-          Therefore, Artistic Heights Academy aims to honor the late Bryce Christopher Pitts’ legacy by naming the LA MCE sponsorship opportunity the BCP Scholarship. This scholarship is designed to empower one aspiring artist to follow their dreams and achieve their fullest artistic potential.
+          Therefore, Artistic Heights Academy aims to honor the late Bryce Christopher Pitts' legacy by naming the LA MCE sponsorship opportunity the BCP Scholarship. This scholarship is designed to empower one aspiring artist to follow their dreams and achieve their fullest artistic potential.
         </p>
         <div className="flex justify-center">
-          <Image
-            src="/Bryce.png"
-            alt="Bryce Christopher Pitts"
-            width={280}
-            height={380}
-            className="mb-6 drop-shadow-xl object-contain opacity-0 animate-float-in"
-          />
+          <a
+            href="https://form.fillout.com/t/jpHEoE31rcus"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:opacity-80 transition-opacity cursor-pointer"
+          >
+            <Image
+              src="/Bryce.png"
+              alt="Bryce Christopher Pitts"
+              width={280}
+              height={380}
+              className="mb-6 drop-shadow-xl object-contain opacity-0 animate-float-in"
+            />
+          </a>
         </div>
       </div>
     </div>

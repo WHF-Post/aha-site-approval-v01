@@ -19,26 +19,21 @@ export default function Support() {
             />
           </div>
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80 flex flex-col items-center justify-center text-center px-4">
-            <h1 className="text-5xl font-bold text-yellow-400">
+            <h1 className="text-4xl md:text-5xl font-bold text-yellow-400 mb-4">
               Support Artistic Heights Academy
-              <br />
-              <br /> 
-              <br />
             </h1>
-            <p className="text-lg text-white mt-4 max-w-2xl">
-              Research underscores the transformative power of arts engagement,
-              listing benefits such as: Enhanced Cognitive Ability, Sharpened
-              Problem-Solving Skills, Increased Self-Esteem, and Deeper Emotional
-              Expression. These advantages not only shape personal growth but
-              also foster professional success across industries.
+            <p className="text-sm md:text-lg text-white mt-4 max-w-2xl leading-relaxed">
+              Artistic Heights Academy is Atlanta's premier performing arts education institution. Our mission is to Equip, Empower, and Elevate the next generation of performing arts talent.
+
+              Research underscores the transformative impact of arts engagement — fostering Enhanced Cognitive Ability, Sharpened Problem-Solving Skills, Increased Self-Esteem, and Deepen Emotional Expression. These advantages fuel personal growth and drive professional excellence across all fields.
             </p>
             <a
-              href="https://www.paypal.com/ncp/payment/WGV5VT5YVEKW8"
+              href="https://form.fillout.com/t/jpHEoE31rcus"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 inline-block px-8 py-4 bg-white text-black font-semibold rounded-2xl shadow-lg hover:bg-yellow-500 transition"
             >
-              Donate Now
+              Support AHA
             </a>
           </div>
         </div>
